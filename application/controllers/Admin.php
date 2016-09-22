@@ -15,7 +15,7 @@ class Admin extends AdminBase
     {
         if($this->is_logged())
         {
-            $data['title'] = 'CEI: Admin Home Page';
+            $data['title'] = 'CEI: Admin Admin Page';
             $data['include'] = 'admin_index';
             $this->load->view('admin_template', $data);
         }
@@ -23,5 +23,12 @@ class Admin extends AdminBase
         {
             redirect(base_url().'login', 'refresh');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('logged_in');
+        session_destroy();
+        redirect('admin', 'refresh');
     }
 }

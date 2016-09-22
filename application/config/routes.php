@@ -53,4 +53,12 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
+// 定义ProjectManager的相关url
+$route['admin/projects'] = 'ProjectManager';
+$route['admin/projects/listing'] = 'ProjectManager/listing';
+$route['admin/projects/add'] = 'ProjectManager/add';
+$route['admin/projects/create'] = 'ProjectManager/create';
+$route['admin/projects/delete/(:num)'] = 'ProjectManager/delete';
+$route['admin/projects/edit/(:num)'] = 'ProjectManager/edit';
+$route['admin/projects/update'] = 'ProjectManager/update';
+$route['admin/projects/view/(:num)'] = 'ProjectManager/view';
